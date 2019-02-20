@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="java">
+    <head>
+        <meta charset="utf-8">
+        <title>Traffic Lights</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+      <div id="side"></div>
+      <div id="dodai">
+        <div  id="lights1" class="box1"></div>
+        <div  id="lights2" class="box2"></div>
+        <div  id="lights3" class="box3"></div>
+      </div>
+
+      <div id="button">
+        <div id="button1">
+          <p>おまちください</p>
+        </div>
+        <div id="button2"></div>
+        <div id="button3">
+          <p>押してください</p>
+        </div>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script>
+        $(function () {
+          $('#button2').click(function() {
+            $('#lights1').css('background', 'royalblue');
+          });
+
+          $('#button2').click(function() {
+            setTimeout(function() {
+            $('#lights1').css('background', 'grey');
+          },2000);
+          });
+
+          $('#button2').click(function() {
+            setTimeout(function() {
+              $('#lights2').css('background', '#FFFF00');
+            },2000);
+          });
+          $('#button2').click(function() {
+            setTimeout(function() {
+            $('#lights2').css('background', 'grey');
+          },4000);
+          });
+
+          $('#button2').click(function() {
+            setTimeout(function() {
+              $('#lights3').css('background', '#FF0000');
+            },4000);
+          });
+          $('#button2').click(function() {
+            setTimeout(function() {
+            $('#lights3').css('background', 'grey');
+          },6000);
+          });
+
+        });
+      </script>
+    </body>
+</html>
