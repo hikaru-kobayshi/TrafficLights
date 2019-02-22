@@ -26,38 +26,27 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script>
           $(function () {
-            $('#button2').click(function() {
-              setTimeout(function() {
+          $('#button2').on('click',function() {
+            setTimeout(function(){
               $('#lights1').css('background', 'royalblue');
-            },0500);
-            });
-            $('#button2').click(function() {
-              setTimeout(function() {
+            },1000);
+            setTimeout(function(){
               $('#lights1').css('background', 'grey');
             },2000);
-            });
-            $('#button2').click(function() {
-              setTimeout(function() {
-                $('#lights2').css('background', '#FFFF00');
-              },2000);
-            });
-            $('#button2').click(function() {
-              setTimeout(function() {
+            setTimeout(function() {
+              $('#lights2').css('background', '#FFFF00');
+            },2000);
+            setTimeout(function() {
               $('#lights2').css('background', 'grey');
-            },4000);
-            });
-            $('#button2').click(function() {
-              setTimeout(function() {
-                $('#lights3').css('background', '#FF0000');
-              },4000);
-            });
-            $('#button2').click(function() {
-              setTimeout(function() {
+            },3000);
+            setTimeout(function() {
+              $('#lights3').css('background', '#FF0000');
+            },3000);
+            setTimeout(function() {
               $('#lights3').css('background', 'grey');
-            },6000);
-            });
+            },4000);
           });
-
+      });
       </script>
     </body>
 </html>
