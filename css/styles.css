@@ -9,8 +9,13 @@ body {
   float: left;
   background: #C0C0C0;
 }
+#body {
+  width: 670px;
+  height: 220px;
+  background: #C0C0C0;
+}
 
-#lights1 {
+#blue {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -22,7 +27,7 @@ body {
   margin: 10px;
 }
 
-#lights2 {
+#yellow {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -35,7 +40,7 @@ body {
 }
 
 
-#lights3 {
+#red {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -51,21 +56,22 @@ body {
   cursor: pointer;
 }
 
-#button {
+#buttonBody {
   width: 150px;
   height: 250px;
   background: yellow;
   margin: auto;
 }
 
-#button1 {
+#instructionTop,
+#instructionEnd {
   width: 100px;
   height: 40px;
   background: black;
   margin: auto;
 }
 
-#button2 {
+#button {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -74,23 +80,9 @@ body {
   margin: 22px 45px 22px 45px;
 }
 
-
-#button3 {
-  width: 100px;
-  height: 40px;
-  background: black;
-  margin: auto;
-}
-
 p {
   font-size: 13px;
   font-weight: bold;
   text-align:center;
   color: red;
-}
-
-#dodai {
-  width: 670px;
-  height: 220px;
-  background: #C0C0C0;
 }
