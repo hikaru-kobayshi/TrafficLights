@@ -3,43 +3,28 @@ body {
   flex-wrap: wrap;
 }
 
+p {
+  font-size: 13px;
+  font-weight: bold;
+  text-align:center;
+  color: red;
+}
+
 #side {
   width: 40px;
   height: 750px;
   float: left;
   background: #C0C0C0;
 }
+
 #body {
   width: 670px;
   height: 220px;
   background: #C0C0C0;
 }
 
-#blue {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: grey;
-  line-height: 200px;
-  user-select: none;
-  float: left;
-  box-shadow: 10px 4px 30px;
-  margin: 10px;
-}
-
-#yellow {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: grey;
-  line-height: 200px;
-  user-select: none;
-  float: left;
-  box-shadow: 10px 4px 30px;
-  margin: 10px;
-}
-
-
+#blue,
+#yellow,
 #red {
   width: 200px;
   height: 200px;
@@ -78,11 +63,4 @@ body {
   background: red;
   cursor: pointer;
   margin: 22px 45px 22px 45px;
-}
-
-p {
-  font-size: 13px;
-  font-weight: bold;
-  text-align:center;
-  color: red;
 }
