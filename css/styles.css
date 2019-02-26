@@ -54,6 +54,7 @@ p {
   height: 40px;
   background: black;
   margin: auto;
+  user-select: none;
 }
 
 #button {
@@ -63,4 +64,19 @@ p {
   background: red;
   cursor: pointer;
   margin: 22px 45px 22px 45px;
+}
+
+#reload {
+  font-size: 18px;
+  font-weight: bold;
+  width: 150px;
+  height: 150px;
+  background: #FFFF66;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  margin: auto;
+  color: red;
+  cursor: pointer;
+  user-select: none;
 }
