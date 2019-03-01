@@ -1,6 +1,5 @@
 $(function(){
-  var myDefer = $.Deferred();
-
+  const myDefer = $.Deferred();
   $('#button').click(function(){
     myDefer.resolve();
   });
@@ -8,34 +7,32 @@ $(function(){
     myDefer.reject();
   });
 
-  var myPromise = myDefer.promise();
-
+  const duration = 1500;
+  const myPromise = myDefer.promise();
   myPromise.then(
     function(){
-      $('#blue').css('background', 'royalblue');
-    }
-  ).then(
-    function(){
-      setTimeout(function(){
-        $('#yellow').css('background', '#FFFF00');
-        $('#blue').css('background', '');
-      },1500);
-    }
-  ).then(
-    function(){
-      setTimeout(function(){
-        $('#red').css('background', '#FF0000');
-        $('#yellow').css('background', '');
-      },3000);
-    }
-  ).then(
-    function(){
-      setTimeout(function(){
-        $('#red').css('background', '');
-      },4500);
-    }
-  );
+      $('#body').delay(duration).queue(function(next) {
+        $(this).attr('light', 'blue').dequeue();
+      }).delay(duration).queue(function(next) {
+        $(this).attr('light', 'yellow').dequeue();
+      }).delay(duration).queue(function(next) {
+        $(this).attr('light', 'red').dequeue();
+      }).delay(duration).queue(function(next) {
+        $(this).attr('light', '').dequeue();
+      });
+    });
   $('#reload').click(function() {
     location.reload();
   });
+
+  {
+    const btn = document.getElementById('button');
+
+    btn.addEventListener('mousedown', () => {
+      btn.classList.add('press');
+    });
+    btn.addEventListener('mouseup', () => {
+      btn.classList.remove('press');
+    });
+  }
 });
