@@ -78,19 +78,3 @@ p {
   margin: 24px 45px 20px 45px;
   box-shadow: 0 1px 0 #D14B3E;
 }
-
-#reload {
-  font-size: 18px;
-  font-weight: bold;
-  width: 150px;
-  height: 150px;
-  background: #FFFF66;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 150px;
-  margin: 250px auto 0;
-  color: red;
-  cursor: pointer;
-  user-select: none;
-}
-
