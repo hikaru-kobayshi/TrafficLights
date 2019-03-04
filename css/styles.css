@@ -37,7 +37,7 @@ p {
   margin: 10px;
 }
 
-#body[light ="blue"] #blue {
+#body[light="blue"] #blue {
   background: royalblue;
 }
 
