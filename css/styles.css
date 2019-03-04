@@ -2,34 +2,36 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
 p {
   font-size: 13px;
   font-weight: bold;
   text-align:center;
-  color: red;
+  margin: 25px;
+  color: rgb(255,0,0);
+  width: 100px;
+  height: 40px;
+  background: rgb(0,0,0);
+  user-select: none;
+  line-height: 40px;
 }
-
 #side {
   width: 40px;
   height: 750px;
   float: left;
-  background: #C0C0C0;
+  background: rgb(192,192,192);
 }
-
 #body {
   width: 670px;
   height: 220px;
-  background: #C0C0C0;
+  background: rgb(192,192,192);
 }
-
 #blue,
 #yellow,
 #red {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: grey;
+  background: rgb(128,128,128);
   line-height: 200px;
   user-select: none;
   float: left;
@@ -38,15 +40,15 @@ p {
 }
 
 #body[light="blue"] #blue {
-  background: royalblue;
+  background: rgb(0,0,255);
 }
 
 #body[light="yellow"] #yellow {
-  background: #FFFF00;
+  background: rgb(255,255,0);
 }
 
 #body[light="red"] #red {
-  background: #FF0000;
+  background: rgb(255,0,0);
 }
 #click {
   cursor: pointer;
@@ -54,27 +56,20 @@ p {
 #buttonBody {
   width: 150px;
   height: 250px;
-  background: yellow;
+  background: rgb(255,255,0);
   margin: auto;
 }
-#instructionTop,
-#instructionEnd {
-  width: 100px;
-  height: 40px;
-  background: black;
-  margin: auto;
-  user-select: none;
-}
+
 #button {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: red;
+  background: rgb(255,0,0);
   cursor: pointer;
-  margin: 22px 45px 22px 45px;
-  box-shadow: 0 3px 0 #D14B3E;
+  margin:auto;
+  box-shadow: 0 3px 0 rgb(128,0,0);
 }
 #button.press {
-  margin: 24px 45px 20px 45px;
-  box-shadow: 0 1px 0 #D14B3E;
+  margin-top: 32px auto;
+  box-shadow: 0 1px 0 rgb(128,0,0);
 }
