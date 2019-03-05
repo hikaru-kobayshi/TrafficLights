@@ -4,23 +4,23 @@ $(function(){
   const len = colors.length;
   let isRunning = false;
 
-  if (isRunning)return;
+  $('#button').click(function(){
+    if (isRunning)return;
+    isRunning = true;
     for (let i=0; i<len; i++) {
-      $('#button').click(function(){
-        isRunning = true;
-        $.when(
-          $('#wait').addClass('show'),
-          $('#push').addClass('hide'),
-          $('#body').delay(duration).queue(function() {
-            $(this).attr('light', colors[i]).dequeue();
-          })
-        ).done(function() {
-          $('#wait').removeClass('show')
-          $('#push').removeClass('hide')
-          isRunning = false;
-        });
+      $.when(
+        $('#wait').addClass('show'),
+        $('#push').addClass('hide'),
+        $('#body').delay(duration).queue(function() {
+          $(this).attr('light', colors[i]).dequeue();
+        })
+      ).done(function() {
+        $('#wait').removeClass('show')
+        $('#push').removeClass('hide')
+        isRunning = false;
       });
-    }
+    };
+  });
   $('#button')
     .mousedown(function(){
       $(this).addClass('press');
