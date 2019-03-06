@@ -19,7 +19,7 @@ $(function(){
         $('#push').removeClass('hide')
         isRunning = false;
       });
-    };
+    }
   });
   $('#button')
     .mousedown(function(){
