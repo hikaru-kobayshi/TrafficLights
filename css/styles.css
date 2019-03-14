@@ -9,8 +9,8 @@ p {
   color: rgb(255,0,0);
   user-select: none;
 }
-#instructionTop,
-#instructionEnd {
+.instructionTop,
+.instructionEnd {
   width: 100px;
   height: 40px;
   background: rgb(0,0,0);
@@ -24,7 +24,7 @@ p {
   float: left;
   background: rgb(192,192,192);
 }
-#body {
+.body {
   width: 670px;
   height: 220px;
   background: rgb(192,192,192);
@@ -51,7 +51,7 @@ p {
 #body[light="red"] #red {
   background: rgb(255,0,0);
 }
-#buttonBody {
+.buttonBody {
   width: 150px;
   height: 250px;
   background: rgb(255,255,0);
