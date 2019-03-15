@@ -32,7 +32,7 @@ $(() => {
       isRunning = false;
     }
   });
-  // ボタンが押されたように見えるレイアウト
+  // ボタンが押されたように見えるスタイリング
   $('#button')
     .mousedown(function(){
       $(this).addClass('press');
