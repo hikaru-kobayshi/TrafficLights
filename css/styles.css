@@ -1,7 +1,8 @@
 body {
   display: flex;
   flex-wrap: wrap;
-  width: 923px;
+  font-family: Meiryo, sans-serif;
+  width: 940px;
   height: 750px;
 }
 p {
@@ -26,7 +27,7 @@ p {
   float: left;
   background: rgb(192,192,192);
 }
-.body {
+#body {
   width: 670px;
   height: 220px;
   background: rgb(192,192,192);
@@ -53,6 +54,7 @@ p {
 #body[light="red"] #red {
   background: rgb(255,0,0);
 }
+
 .buttonBody {
   width: 150px;
   height: 250px;
