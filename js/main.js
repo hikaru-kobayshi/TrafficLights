@@ -6,7 +6,7 @@ $(() => {
   let isRunnig = false;
   let change = false;
 
-// 信号機の色を順番に帰る処理
+// 信号機の色を順番に変える処理
   const transitColor = color =>
   new Promise(resolve => {
     $('#body').attr('light',color);
