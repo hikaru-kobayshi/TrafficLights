@@ -1,43 +1,40 @@
 $(() => {
   'use strict';
 
-  const duration = 1000;
   const colors = ['blue','yellow','red',''];
-  const len = colors.length;
-  let isRunning = false;
+  const interval = 2000;
+  let isRunnig = false;
+  let change = false;
 
-  // 信号機の色を時間差で変化させる
+// 信号機の色を順番に帰る処理
   const transitColor = color =>
   new Promise(resolve => {
-    for (let i=0; i<len; i++) {
-      $('#body').delay(duration).queue(function() {
-        $(this).attr('light', colors[i]).dequeue();
-      });
-    }
+    $('#body').attr('light',color);
+    setTimeout(resolve, interval);
   });
-  // ボタンクリック時の処理およびボタン上の表示切り替え処理
+
+// 繰り返し処理およびボタンの表示切り替え
   $('#button').click(async () => {
-    if (isRunning) return;
-    isRunning = true;
+    if (isRunnig) return;
+    isRunnig = true;
     for (const color of colors) {
-      console.log("start!");
-      setTimeout(function() {
-        $('#wait').removeClass('show');
-        $('#push').removeClass('hide');
-        console.log("end!");
-      },4000);
+      console.log('start');
       $('#wait').addClass('show');
       $('#push').addClass('hide');
       await transitColor(color);
-      isRunning = false;
+      $('#wait').removeClass('show');
+      $('#push').removeClass('hide');
+      console.log('end');
     }
+    isRunnig = false;
   });
+
   // ボタンが押されたように見えるスタイリング
   $('#button')
-    .mousedown(function(){
-      $(this).addClass('press');
+    .mousedown(() => {
+      $(event.currentTarget).addClass('press');
     })
-    .mouseup(function(){
-      $(this).removeClass('press');
+    .mouseup(() => {
+      $(event.currentTarget).removeClass('press');
     })
 });
