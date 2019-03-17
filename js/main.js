@@ -14,17 +14,15 @@ $(() => {
   });
 
 // 繰り返し処理およびボタンの表示切り替え
-  $('#button').click(async () => {
+  $('#button').click(async() => {
     if (isRunnig) return;
     isRunnig = true;
     for (const color of colors) {
-      console.log('start');
       $('#wait').addClass('show');
       $('#push').addClass('hide');
       await transitColor(color);
       $('#wait').removeClass('show');
       $('#push').removeClass('hide');
-      console.log('end');
     }
     isRunnig = false;
   });
