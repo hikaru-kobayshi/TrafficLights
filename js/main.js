@@ -13,17 +13,17 @@ $(() => {
     setTimeout(resolve, interval);
   });
 
-// 繰り返し処理およびボタンの表示切り替え
-  $('#button').click(async() => {
+// 繰り返し処理およびボタンの表示を切り替える処理
+  $('#button').click(async () => {
     if (isRunnig) return;
     isRunnig = true;
+    $('#wait').addClass('show');
+    $('#push').addClass('hide');
     for (const color of colors) {
-      $('#wait').addClass('show');
-      $('#push').addClass('hide');
       await transitColor(color);
-      $('#wait').removeClass('show');
-      $('#push').removeClass('hide');
     }
+    $('#wait').removeClass('show');
+    $('#push').removeClass('hide');
     isRunnig = false;
   });
 
