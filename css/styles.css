@@ -21,14 +21,14 @@ p {
   line-height: 40px;
   margin:25px;
 }
-#side {
+.side {
   width: 40px;
   height: 750px;
   float: left;
   background: rgb(192,192,192);
 }
 #body {
-  width: 670px;
+  width: 700px;
   height: 220px;
   background: rgb(192,192,192);
 }
