@@ -4,7 +4,6 @@ $(() => {
   const colors = ['blue','yellow','red',''];
   const interval = 2000;
   let isRunnig = false;
-  let change = false;
 
 // 信号機の色を順番に変える処理
   const transitColor = color =>
