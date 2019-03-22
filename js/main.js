@@ -28,10 +28,10 @@ $(() => {
 
   // ボタンが押されたように見えるスタイリング
   $('#button')
-    .mousedown(() => {
-      $(event.currentTarget).addClass('press');
+    .mousedown((e) => {
+      $(e.currentTarget).addClass('press');
     })
-    .mouseup(() => {
-      $(event.currentTarget).removeClass('press');
+    .mouseup((e) => {
+      $(e.currentTarget).removeClass('press');
     })
 });
